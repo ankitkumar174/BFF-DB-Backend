@@ -6,7 +6,7 @@ import random
 
 application = Flask(__name__)
 
-UPLOAD_FOLDER = 'static/uploads'
+UPLOAD_FOLDER = 'static/uploads/'
 application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 application.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
@@ -70,9 +70,8 @@ def upload_file():
 
 @application.route('/json')
 def get_json(filename):
-    intDir = '/static/uploads/'
-    url = ''
-    return str(url + intDir + filename)
+    url = 'https://AWS14.arnavgoyal4.repl.co'
+    return str(url+'/' + UPLOAD_FOLDER+ filename)
 
 
 
