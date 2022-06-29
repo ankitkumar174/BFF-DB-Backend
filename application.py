@@ -71,4 +71,6 @@ def get_json(filename):
     return str(url+intDir+filename)
  
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(host='0.0.0.0',
+		port=random.randint(2000, 9000))
+   
