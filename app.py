@@ -10,7 +10,7 @@ UPLOAD_FOLDER = 'static/uploads'
 application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 application.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set([ 'png', 'jpg', 'jpeg'])
 
 
 def allowed_file(filename):
