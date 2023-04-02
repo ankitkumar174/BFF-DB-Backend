@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request, jsonify
 import pymongo, random, json
 from datetime import datetime
+from flask_ngrok import run_with_ngrok
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 app.secret_key = "bffsubmission123"
+CORS(app,resources={r"/api/*":{"origins":"*"}})                                                                                          // temperory change 
+CORS(app) 
+# app.config['CORS_HEADERS']='Content-Type'                                                                                                // temperory change 
+run_with_ngrok(app)
 
 Private_Repl_URL = "https://c6752e41-659a-4829-ba1b-3a9aac357be2.id.repl.co/"  # Found this Private URL in "Toggle Developers Tool" in "Webview" section inside "Resources" tab. Scroll a bit to find it with "https://*.id.repl.co/".
 MONGO_URI = "mongodb+srv://kuwar:JvKRvzRUKWVrCbSH@cluster0.kgwnehm.mongodb.net/"
